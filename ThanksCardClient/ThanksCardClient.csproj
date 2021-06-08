@@ -76,11 +76,7 @@
     <Compile Include="ViewModels\TagEditViewModel.cs" />
     <Compile Include="ViewModels\TagMstViewModel.cs" />
     <Compile Include="ViewModels\ThanksCardCreateViewModel.cs" />
-    <Compile Include="ViewModels\ThanksCardInBoxViewModel.cs" />
-    <Compile Include="ViewModels\ThanksCardIndetailsViewModel.cs" />
     <Compile Include="ViewModels\ThanksCardListViewModel.cs" />
-    <Compile Include="ViewModels\ThanksCardOutBoxViewModel.cs" />
-    <Compile Include="ViewModels\ThanksCardOutdetailsViewModel.cs" />
     <Compile Include="ViewModels\UserCreateViewModel.cs" />
     <Compile Include="ViewModels\UserEditViewModel.cs" />
     <Compile Include="ViewModels\UserMstViewModel.cs" />
@@ -114,20 +110,8 @@
     <Compile Include="Views\ThanksCardCreate.xaml.cs">
       <DependentUpon>ThanksCardCreate.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ThanksCardInBox.xaml.cs">
-      <DependentUpon>ThanksCardInBox.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ThanksCardIndetails.xaml.cs">
-      <DependentUpon>ThanksCardIndetails.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\ThanksCardList.xaml.cs">
       <DependentUpon>ThanksCardList.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ThanksCardOutBox.xaml.cs">
-      <DependentUpon>ThanksCardOutBox.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ThanksCardOutdetails.xaml.cs">
-      <DependentUpon>ThanksCardOutdetails.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UserCreate.xaml.cs">
       <DependentUpon>UserCreate.xaml</DependentUpon>
@@ -199,23 +183,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ThanksCardInBox.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ThanksCardIndetails.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\ThanksCardList.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ThanksCardOutBox.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ThanksCardOutdetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
