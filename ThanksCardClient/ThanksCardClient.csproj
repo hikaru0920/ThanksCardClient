@@ -70,7 +70,7 @@
     <Compile Include="ViewModels\BranchCreateViewModel.cs" />
     <Compile Include="ViewModels\BranchMstViewModels.cs" />
     <Compile Include="ViewModels\DepartmentCreateViewModel.cs" />
-    <Compile Include="ViewModels\BranchEditModel.cs" />
+    <Compile Include="ViewModels\BranchEditViewModel.cs" />
     <Compile Include="ViewModels\DepartmentEditViewModel.cs" />
     <Compile Include="ViewModels\DepartmentMstViewModel.cs" />
     <Compile Include="ViewModels\FooterViewModel.cs" />

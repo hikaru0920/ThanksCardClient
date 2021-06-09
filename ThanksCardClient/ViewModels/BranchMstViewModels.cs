@@ -65,7 +65,7 @@ namespace ThanksCardClient.ViewModels
 
         void ExecuteBranchEditCommand(Branch SelectedBranch)
         {
-            // 対象のDepartmentをパラメーターとして画面遷移先に渡す。
+            // 対象のBranchをパラメーターとして画面遷移先に渡す。
             var parameters = new NavigationParameters();
             parameters.Add("SelectedBranch", SelectedBranch);
 
