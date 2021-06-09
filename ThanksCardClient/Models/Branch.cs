@@ -73,5 +73,7 @@ namespace ThanksCardClient.Models
             Branch deletedBranch = await rest.DeleteBranchAsync(Id);
             return deletedBranch;
         }
+
+
     }
 }

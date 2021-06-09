@@ -46,24 +46,6 @@ namespace ThanksCardClient.Models
         }
         #endregion
 
-        #region DepartmentIdProperty
-        private long? _DepartmentId;
-        public long? DepartmentId
-        {
-            get { return _DepartmentId; }
-            set { SetProperty(ref _DepartmentId, value); }
-        }
-        #endregion
-
-        #region DepartmentProperty
-        private Department _Department;
-        public Department Department
-        {
-            get { return _Department; }
-            set { SetProperty(ref _Department, value); }
-        }
-        #endregion
-
         #region BranchIdProperty
         private long? _BranchId;
         public long? BranchId
