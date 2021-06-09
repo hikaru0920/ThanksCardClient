@@ -36,6 +36,9 @@ namespace ThanksCardClient
             containerRegistry.RegisterForNavigation<BranchMst>();
             containerRegistry.RegisterForNavigation<BranchCreate>();
             containerRegistry.RegisterForNavigation<BranchEdit>();
+            containerRegistry.RegisterForNavigation<HomePage>();
+            containerRegistry.RegisterForNavigation<Manual>();
+
         }
     }
 }

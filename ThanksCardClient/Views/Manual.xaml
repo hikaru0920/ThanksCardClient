@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="ThanksCardClient.Views.Manual"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid Height="140" Width="160">
+        <TextBlock HorizontalAlignment="Left" Height="140" TextWrapping="Wrap" Text="This is user manual page." VerticalAlignment="Top" Width="155"/>
+
+    </Grid>
+</UserControl>

@@ -11,5 +11,10 @@ namespace ThanksCardClient.Views
         {
             InitializeComponent();
         }
+
+        private void signup_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
+        {
+
+        }
     }
 }

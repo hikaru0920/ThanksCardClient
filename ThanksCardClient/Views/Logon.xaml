@@ -4,6 +4,9 @@
              xmlns:prism="http://prismlibrary.com/"             
              prism:ViewModelLocator.AutoWireViewModel="True" Height="152.427" Width="382.094">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="1900857.jpg" Stretch="None"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="155*"/>
             <ColumnDefinition Width="36*"/>
@@ -12,10 +15,9 @@
         <TextBlock Margin="16.665,34.811,238.238,100.356"><Run Text="Name"/><Run Text="："/></TextBlock>
         <TextBox Text="{Binding User.Name}" Margin="95.205,34.811,23.202,100.356"/>
         <TextBlock Margin="16.666,70,219.871,65.333"><Run Text="Password"/><Run Text="："/></TextBlock>
-        <TextBox Text="{Binding User.Password}" Margin="95.205,68.445,23.202,65.333"/>
-        <Button Content="Logon" Command="{Binding LogonCommand}" HorizontalAlignment="Left" Width="41.703" Margin="0,52.096,0,77.573" Grid.Column="1"/>
-        <Button Content="SignUp" Command="{Binding SignUpCommand}" HorizontalAlignment="Left" Height="20.667" Margin="309.345,79.854,0,51.906" Grid.ColumnSpan="2"/>
-        <Button Content="Request" HorizontalAlignment="Left" Height="20.667" Margin="0,105.521,0,26.239" Grid.Column="1"/>
-
-    </Grid>
+        <TextBox Text="{Binding User.Password}" Margin="95.205,68.445,23.202,65.333" VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="FromClip" TextChanged="TextBox_TextChanged_1"/>
+        <Button Content="ログイン" Command="{Binding LogonCommand}" HorizontalAlignment="Left" Width="63" Margin="157,98,0,32"/>
+        <Button Content="サインアップ" Command="{Binding SignUpCommand}" HorizontalAlignment="Left" Height="20.667" Margin="157,125,0,6" Width="63"/>
+        <Button Content="リクエスト" HorizontalAlignment="Left" Height="20.667" Margin="10,121,0,10" Width="56" Grid.Column="1"/>
+            </Grid>
 </UserControl>
