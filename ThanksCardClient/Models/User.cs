@@ -64,6 +64,24 @@ namespace ThanksCardClient.Models
         }
         #endregion
 
+        #region BranchIdProperty
+        private long? _BranchId;
+        public long? BranchId
+        {
+            get { return _BranchId; }
+            set { SetProperty(ref _BranchId, value); }
+        }
+        #endregion
+
+        #region BranchProperty
+        private Branch _Branch;
+        public Branch Branch
+        {
+            get { return _Branch; }
+            set { SetProperty(ref _Branch, value); }
+        }
+        #endregion
+
         public async Task<User> LogonAsync()
         {
             IRestService rest = new RestService();
@@ -75,6 +93,13 @@ namespace ThanksCardClient.Models
         {
             IRestService rest = new RestService();
             List<User> users = await rest.GetDepartmentUsersAsync(DepartmentId);
+            return users;
+        }
+
+        public async Task<List<User>> GetBranchUsersAsync(long? BranchId)
+        {
+            IRestService rest = new RestService();
+            List<User> users = await rest.GetBranchUsersAsync(BranchId);
             return users;
         }
 

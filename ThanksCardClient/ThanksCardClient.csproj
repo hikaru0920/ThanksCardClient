@@ -58,6 +58,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\Branch.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Tag.cs" />
     <Compile Include="Models\ThanksCard.cs" />
@@ -66,7 +67,10 @@
     <Compile Include="Services\IRestService.cs" />
     <Compile Include="Services\RestService.cs" />
     <Compile Include="Services\SessionService.cs" />
+    <Compile Include="ViewModels\BranchCreateViewModel.cs" />
+    <Compile Include="ViewModels\BranchMstViewModels.cs" />
     <Compile Include="ViewModels\DepartmentCreateViewModel.cs" />
+    <Compile Include="ViewModels\BranchEditModel.cs" />
     <Compile Include="ViewModels\DepartmentEditViewModel.cs" />
     <Compile Include="ViewModels\DepartmentMstViewModel.cs" />
     <Compile Include="ViewModels\FooterViewModel.cs" />
@@ -80,11 +84,20 @@
     <Compile Include="ViewModels\UserCreateViewModel.cs" />
     <Compile Include="ViewModels\UserEditViewModel.cs" />
     <Compile Include="ViewModels\UserMstViewModel.cs" />
+    <Compile Include="Views\BranchCreate.xaml.cs">
+      <DependentUpon>BranchCreate.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DepartmentCreate.xaml.cs">
       <DependentUpon>DepartmentCreate.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\BranchEdit.xaml.cs">
+      <DependentUpon>BranchEdit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DepartmentEdit.xaml.cs">
       <DependentUpon>DepartmentEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BranchMst.xaml.cs">
+      <DependentUpon>BranchMst.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\DepartmentMst.xaml.cs">
       <DependentUpon>DepartmentMst.xaml</DependentUpon>
@@ -122,13 +135,25 @@
     <Compile Include="Views\UserMst.xaml.cs">
       <DependentUpon>UserMst.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\BranchCreate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\DepartmentCreate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\BranchEdit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\DepartmentEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BranchMst.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\DepartmentMst.xaml">
       <SubType>Designer</SubType>
