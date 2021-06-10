@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="ThanksCardClient.Views.PDF"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid Height="500" Width="600" MinWidth="2" UseLayoutRounding="True">
+        <Grid.Background>
+            <ImageBrush ImageSource="申請書.jpg"/>
+        </Grid.Background>
+        <Button Content="Back" Command="{Binding LogoffCommand}" HorizontalAlignment="Left" Height="30" Margin="55,425,0,0" VerticalAlignment="Top" Width="125"/>
+    </Grid>
+</UserControl>

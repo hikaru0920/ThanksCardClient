@@ -18,7 +18,7 @@
         <TextBox Text="{Binding User.Password}" Margin="95.205,68.445,23.202,65.333"/>
         <Button Content="ログイン" Command="{Binding LogonCommand}" HorizontalAlignment="Left" Width="63" Margin="157,98,0,32"/>
         <Button Content="サインアップ" Command="{Binding SignUpCommand}" HorizontalAlignment="Left" Height="20.667" Margin="157,125,0,6" Width="63"/>
-        <Button Content="リクエスト" HorizontalAlignment="Left" Height="20.667" Margin="10,121,0,10" Width="56" Grid.Column="1"/>
+        <Button Content="リクエスト" Command="{Binding PDFCommand}" HorizontalAlignment="Left" Height="20.667" Margin="10,121,0,10" Width="56" Grid.Column="1"/>
 
     </Grid>
 </UserControl>

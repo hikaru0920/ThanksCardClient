@@ -81,5 +81,19 @@ namespace ThanksCardClient.ViewModels
             this.regionManager.Regions["FooterRegion"].RemoveAll();
         }
         #endregion
+
+        #region PDFCommand
+        private DelegateCommand _PDFCommand;
+        public DelegateCommand PDFCommand =>
+            _PDFCommand ?? (_PDFCommand = new DelegateCommand(ExecuteOrder));
+
+        void ExecuteOrder()
+        {
+            this.regionManager.Regions["HeaderRegion"].RemoveAll();
+            this.regionManager.RequestNavigate("ContentRegion", nameof(Views.PDF));
+            this.regionManager.Regions["FooterRegion"].RemoveAll();
+        }
+        #endregion
+
     }
 }

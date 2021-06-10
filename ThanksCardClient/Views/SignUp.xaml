@@ -15,17 +15,11 @@
         <TextBlock Margin="63.333,106.146,273.57,179.022" Foreground="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"><Run Text="Name"/><Run Text="："/></TextBlock>
         <TextBlock Margin="64.667,174.812,272.236,108.655" Foreground="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"><Run Text="Password"/><Run Text="："/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Height="16" Margin="63.333,39.679,0,0" TextWrapping="Wrap" Text="部署：" VerticalAlignment="Top" Width="60.871" Foreground="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
-        <TextBlock HorizontalAlignment="Left" Height="17.334" Margin="63.333,73.679,0,0" TextWrapping="Wrap" Text="課：" VerticalAlignment="Top" Width="59.537" Foreground="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
-        <TextBlock HorizontalAlignment="Left" Height="17.333" Margin="63.333,141.146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59.537" Foreground="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"><Run Text="社員ID"/><Run Text="："/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Height="20" Margin="63.333,208.167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88.204" Foreground="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"><Run Text="Password"/><Run Text="確認"/><Run Text="："/></TextBlock>
-        <Button Content="作成" HorizontalAlignment="Left" Height="25.703" Margin="128.334,253.333,0,0" VerticalAlignment="Top" Width="58.203"/>
-        <Button Content="戻る" Command="{Binding BacktoLoginCommand}" HorizontalAlignment="Left" Height="25.703" Margin="242,253.333,0,0" VerticalAlignment="Top" Width="56.666"/>
+        <Button Content="作成" HorizontalAlignment="Left" Height="26" Margin="197,235,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button Content="戻る" Command="{Binding BacktoLoginCommand}" HorizontalAlignment="Left" Height="26" Margin="300,235,0,0" VerticalAlignment="Top" Width="57"/>
         <TextBox HorizontalAlignment="Left" Height="16.012" Margin="154.333,108.667,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202.667"/>
-        <TextBox HorizontalAlignment="Left" Height="16.012" Margin="154.333,142.667,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202.667"/>
         <TextBox HorizontalAlignment="Left" Height="16.012" Margin="154.333,173.667,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202.667"/>
-        <TextBox HorizontalAlignment="Left" Height="16.012" Margin="154.333,208.667,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202.667"/>
         <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="202.667" Margin="154.333,33.719,0,0"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="202.667" Margin="154.333,71.679,0,0"/>
 
     </Grid>
 </UserControl>
