@@ -33,10 +33,17 @@ namespace ThanksCardClient
             containerRegistry.RegisterForNavigation<TagCreate>();
             containerRegistry.RegisterForNavigation<TagEdit>();
             containerRegistry.RegisterForNavigation<SignUp>();
+            containerRegistry.RegisterForNavigation<BranchMst>();
+            containerRegistry.RegisterForNavigation<BranchCreate>();
+            containerRegistry.RegisterForNavigation<BranchEdit>();
             containerRegistry.RegisterForNavigation<HomePage>();
             containerRegistry.RegisterForNavigation<Manual>();
+
             containerRegistry.RegisterForNavigation<PDF>();
             containerRegistry.RegisterForNavigation<AI>();
+
+
+
         }
     }
 }

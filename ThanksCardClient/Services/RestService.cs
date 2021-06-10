@@ -68,6 +68,25 @@ namespace ThanksCardClient.Services
             return responseUsers;
         }
 
+        public async Task<List<User>> GetBranchUsersAsync(long? BranchId)
+        {
+            List<User> responseUsers = null;
+            try
+            {
+                var response = await Client.GetAsync(this.BaseUrl + "/api/BranchUsers/" + BranchId);
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseContent = await response.Content.ReadAsStringAsync();
+                    responseUsers = JsonConvert.DeserializeObject<List<User>>(responseContent);
+                }
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine("Exception in RestService.GetUsersAsync: " + e);
+            }
+            return responseUsers;
+        }
+
         public async Task<List<User>> GetUsersAsync()
         {
             List<User> responseUsers = null;
@@ -246,6 +265,96 @@ namespace ThanksCardClient.Services
                 System.Diagnostics.Debug.WriteLine("Exception in RestService.DeleteDepartmentAsync: " + e);
             }
             return responseDepartment;
+        }
+
+        public async Task<List<Branch>> GetBranchesAsync()
+        {
+            List<Branch> responseBranches = null;
+            try
+            {
+                var response = await Client.GetAsync(this.BaseUrl + "/api/Branches");
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseContent = await response.Content.ReadAsStringAsync();
+                    responseBranches = JsonConvert.DeserializeObject<List<Branch>>(responseContent);
+                }
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine("Exception in RestService.GetBranchAsync: " + e);
+            }
+            return responseBranches;
+        }
+
+        public async Task<Branch> PostBranchAsync(Branch branch)
+        {
+            var jObject = JsonConvert.SerializeObject(branch);
+
+            //Make Json object into content type
+            var content = new StringContent(jObject);
+            //Adding header of the contenttype
+            content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
+            Branch responseBranch = null;
+            try
+            {
+                var response = await Client.PostAsync(this.BaseUrl + "/api/Branches", content);
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseContent = await response.Content.ReadAsStringAsync();
+                    responseBranch = JsonConvert.DeserializeObject<Branch>(responseContent);
+                }
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine("Exception in RestService.PostBranchAsync: " + e);
+            }
+            return responseBranch;
+        }
+
+        public async Task<Branch> PutBranchAsync(Branch branch)
+        {
+            var jObject = JsonConvert.SerializeObject(branch);
+
+            //Make Json object into content type
+            var content = new StringContent(jObject);
+            //Adding header of the contenttype
+            content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
+            Branch responseBranch = null;
+            try
+            {
+                var response = await Client.PutAsync(this.BaseUrl + "/api/Branches/" + branch.Id, content);
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseContent = await response.Content.ReadAsStringAsync();
+                    responseBranch = JsonConvert.DeserializeObject<Branch>(responseContent);
+                }
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine("Exception in RestService.PutBranchAsync: " + e);
+            }
+            return responseBranch;
+        }
+
+        public async Task<Branch> DeleteBranchAsync(long Id)
+        {
+            Branch responseBranch = null;
+            try
+            {
+                var response = await Client.DeleteAsync(this.BaseUrl + "/api/Branches/" + Id);
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseContent = await response.Content.ReadAsStringAsync();
+                    responseBranch = JsonConvert.DeserializeObject<Branch>(responseContent);
+                }
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine("Exception in RestService.DeleteBranchAsync: " + e);
+            }
+            return responseBranch;
         }
 
         public async Task<List<ThanksCard>> GetThanksCardsAsync()
