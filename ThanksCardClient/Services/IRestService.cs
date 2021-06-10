@@ -48,5 +48,9 @@ namespace ThanksCardClient.Services
         Task<Tag> DeleteTagAsync(long Id);
 
 
+        // Task<ThanksCard> DeleteThanksCardAsync(long id);
+
+
+
     }
 }

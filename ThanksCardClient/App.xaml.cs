@@ -39,6 +39,11 @@ namespace ThanksCardClient
             containerRegistry.RegisterForNavigation<HomePage>();
             containerRegistry.RegisterForNavigation<Manual>();
 
+            containerRegistry.RegisterForNavigation<PDF>();
+            containerRegistry.RegisterForNavigation<AI>();
+
+
+
         }
     }
 }

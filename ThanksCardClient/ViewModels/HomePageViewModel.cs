@@ -106,5 +106,15 @@ namespace ThanksCardClient.ViewModels
             this.regionManager.RequestNavigate("ContentRegion", nameof(Views.Manual));
         }
         #endregion
+        #region AICommand
+        private DelegateCommand _AICommand;
+        public DelegateCommand AICommand =>
+            _AICommand ?? (_AICommand = new DelegateCommand(ExecuteAICommand));
+
+        void ExecuteAICommand()
+        {
+            this.regionManager.RequestNavigate("ContentRegion", nameof(Views.AI));
+        }
+        #endregion
     }
 }
