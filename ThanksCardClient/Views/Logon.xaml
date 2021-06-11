@@ -2,23 +2,27 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:prism="http://prismlibrary.com/"             
-             prism:ViewModelLocator.AutoWireViewModel="True" Height="152.427" Width="382.094">
+             prism:ViewModelLocator.AutoWireViewModel="True" Height="300" Width="700">
+    <UserControl.Background>
+        <ImageBrush/>
+    </UserControl.Background>
     <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="1900857.jpg" Stretch="None"/>
-        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="155*"/>
             <ColumnDefinition Width="36*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Text="{Binding ErrorMessage}" Foreground="Red" Margin="95.205,15.793,72.777,122.616"/>
-        <TextBlock Margin="16.665,34.811,238.238,100.356"><Run Text="Name"/><Run Text="："/></TextBlock>
-        <TextBox Text="{Binding User.Name}" Margin="95.205,34.811,23.202,100.356"/>
-        <TextBlock Margin="16.666,70,219.871,65.333"><Run Text="Password"/><Run Text="："/></TextBlock>
-        <TextBox Text="{Binding User.Password}" Margin="95.205,68.445,23.202,65.333"/>
-        <Button Content="ログイン" Command="{Binding LogonCommand}" HorizontalAlignment="Left" Width="63" Margin="157,98,0,32"/>
-        <Button Content="サインアップ" Command="{Binding SignUpCommand}" HorizontalAlignment="Left" Height="20.667" Margin="157,125,0,6" Width="63"/>
-        <Button Content="リクエスト" Command="{Binding PDFCommand}" HorizontalAlignment="Left" Height="20.667" Margin="10,121,0,10" Width="56" Grid.Column="1"/>
+        <TextBlock Text="{Binding ErrorMessage}" Foreground="Red" Margin="95,16,72,22"/>
+        <TextBlock Margin="35,32,460,138" FontWeight="Bold"><Run Text="Name"/><Run Text="："/></TextBlock>
+        <TextBox Text="{Binding User.Name}" Margin="108,16,10,138"/>
+        <TextBlock Margin="32,79,473,87" FontWeight="Bold"><Run Text="Password"/><Run Text="："/></TextBlock>
+        <TextBox Text="{Binding User.Password}" Margin="108,67,10,87"/>
+        <Button Content="ログイン" Command="{Binding LogonCommand}" HorizontalAlignment="Left" Width="158" Margin="242,136,0,10"/>
+        <Button Content="サインアップ" Command="{Binding SignUpCommand}" HorizontalAlignment="Left" Margin="242,10,0,36" Width="158" RenderTransformOrigin="2.19,-0.714" Grid.Row="1"/>
+        <Button Content="リクエスト" Command="{Binding PDFCommand}" HorizontalAlignment="Left" Margin="500,10,0,36" Width="158" RenderTransformOrigin="0.303,0.129" Grid.Row="1" Grid.ColumnSpan="2"/>
 
     </Grid>
 </UserControl>

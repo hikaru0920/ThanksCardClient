@@ -4,22 +4,19 @@
              xmlns:prism="http://prismlibrary.com/"             
              prism:ViewModelLocator.AutoWireViewModel="True">
     <Grid Height="301.702" Width="488.517">
-        <Grid.Background>
-            <ImageBrush ImageSource="1900857.jpg" Stretch="None"/>
-        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="155*"/>
             <ColumnDefinition Width="36*"/>
         </Grid.ColumnDefinitions>
         <Frame x:Name="signup" Content="" Navigated="signup_Navigated"/>
-        <TextBlock Margin="63.333,106.146,273.57,179.022" Foreground="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"><Run Text="Name"/><Run Text="："/></TextBlock>
-        <TextBlock Margin="64.667,174.812,272.236,108.655" Foreground="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"><Run Text="Password"/><Run Text="："/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Height="16" Margin="63.333,39.679,0,0" TextWrapping="Wrap" Text="部署：" VerticalAlignment="Top" Width="60.871" Foreground="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
-        <Button Content="作成" HorizontalAlignment="Left" Height="26" Margin="197,235,0,0" VerticalAlignment="Top" Width="58"/>
-        <Button Content="戻る" Command="{Binding BacktoLoginCommand}" HorizontalAlignment="Left" Height="26" Margin="300,235,0,0" VerticalAlignment="Top" Width="57"/>
-        <TextBox HorizontalAlignment="Left" Height="16.012" Margin="154.333,108.667,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202.667"/>
-        <TextBox HorizontalAlignment="Left" Height="16.012" Margin="154.333,173.667,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202.667"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="202.667" Margin="154.333,33.719,0,0"/>
+        <TextBlock Margin="63,103,273,181.702" Foreground="#FF0B0C0C" FontWeight="Bold" RenderTransformOrigin="0.5,0.509"><Run Text="Name"/><Run Text="："/></TextBlock>
+        <TextBlock Margin="63,165,273,117.702" Foreground="#FF0E0F0F" FontWeight="Bold" RenderTransformOrigin="0.5,0.508"><Run Text="Password"/><Run Text="："/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="16" Margin="63,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="61" Foreground="#FF01060C" RenderTransformOrigin="0.526,0" FontWeight="Bold" Text="部署："/>
+        <Button Content="作成" HorizontalAlignment="Left" Height="35" Margin="197,235,0,0" VerticalAlignment="Top" Width="73"/>
+        <Button Content="戻る" Command="{Binding BacktoLoginCommand}" HorizontalAlignment="Left" Height="35" Margin="312,235,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="154,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" BorderBrush="#FF324378"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="154,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" BorderBrush="#FF03060E"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="203" Margin="154,25,0,0" Height="31" Foreground="#FF231B1B" BorderBrush="#FF230909"/>
 
     </Grid>
 </UserControl>
