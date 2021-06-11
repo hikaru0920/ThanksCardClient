@@ -4,12 +4,22 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="{Binding Title}" Height="500" Width="600">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Blue.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
         <Grid>
         <StackPanel>
             <ContentControl prism:RegionManager.RegionName="HeaderRegion" />
-            <Border Background="AliceBlue" Height="15"/>
+            <Border Background="White" Height="15"/>
             <ContentControl prism:RegionManager.RegionName="ContentRegion" />
-            <Border Background="AliceBlue" Height="15"/>
+            <Border Background="White" Height="15"/>
             <ContentControl prism:RegionManager.RegionName="FooterRegion" />
         </StackPanel>
     </Grid>
