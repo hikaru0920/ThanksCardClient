@@ -1,17 +1,26 @@
-﻿<UserControl x:Class="ThanksCardClient.Views.HomePage"
+<UserControl x:Class="ThanksCardClient.Views.HomePage"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:prism="http://prismlibrary.com/"             
+
              prism:ViewModelLocator.AutoWireViewModel="True" Height="200" Width="700">
     <Grid Margin="28,12,10,10">
+
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid Height="80" Width="400">
+
         <Grid.Background>
             <ImageBrush ImageSource="t-time_t-kanji-kansha-yoko.jpg" Stretch="Uniform"/>
         </Grid.Background>
+
+
+
         <Grid.RowDefinitions>
             <RowDefinition Height="15*"/>
             <RowDefinition/>
             <RowDefinition Height="0*"/>
         </Grid.RowDefinitions>
+
         <Button Content="カード作成" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Command="{Binding ShowThanksCardCreateCommand}" Height="48" Margin="11,14,0,0"/>
         <Button Content="ホームページ" HorizontalAlignment="Left" Margin="140,14,0,0" VerticalAlignment="Top" Width="120" Command="{Binding ShowThanksCardListCommand}" Height="48"/>
         <Button Content="ユーザー作成" HorizontalAlignment="Left" Margin="395,84,0,0" VerticalAlignment="Top" Width="120" Command="{Binding ShowUserMstCommand}" IsEnabled="{Binding AuthorizedUser.IsAdmin}" Height="48"/>
@@ -20,6 +29,27 @@
         <Button Content="タグ" HorizontalAlignment="Left" Margin="520,84,0,0" VerticalAlignment="Top" Width="120" Command="{Binding ShowTagMstCommand}" Height="48"/>
         <Button Content="マニュアル" HorizontalAlignment="Left" Margin="395,14,0,0" VerticalAlignment="Top" Width="120" Command="{Binding ManualCommand}" Height="48"/>
 
+
+        <Button Content="カード作成" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Width="75" Command="{Binding ShowThanksCardCreateCommand}"/>
+        <Button Content="Home" HorizontalAlignment="Left" Margin="85,7,0,0" VerticalAlignment="Top" Width="75" Command="{Binding ShowThanksCardListCommand}"/>
+        <Button Content="ユーザー作成" HorizontalAlignment="Left" Margin="245,38,0,0" VerticalAlignment="Top" Width="75" Command="{Binding ShowUserMstCommand}" IsEnabled="{Binding AuthorizedUser.IsAdmin}"/>
+        <Button Content="ログアウト" HorizontalAlignment="Left" Margin="325,7,0,0" VerticalAlignment="Top" Width="65" Command="{Binding LogoffCommand}"/>
+        <Button Content="マスターメンテナンス" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="103" Command="{Binding ShowDepartmentMstCommand}"/>
+        <Button Content="タグ" HorizontalAlignment="Left" Margin="325,38,0,0" VerticalAlignment="Top" Width="65" Command="{Binding ShowTagMstCommand}"/>
+        <Button Content="マニュアル" HorizontalAlignment="Left" Margin="245,7,0,0" VerticalAlignment="Top" Width="75" Command="{Binding ManualCommand}"/>
+        <Button Content="AI"
+                HorizontalAlignment="Left" Margin="118,38,0,0" VerticalAlignment="Top" Width="32" Command="{Binding AICommand}"/>
+
+
+
+
+        <Button Content="Card Create" HorizontalAlignment="Left" Margin="7,7,0,0" VerticalAlignment="Top" Width="75" Command="{Binding ShowThanksCardCreateCommand}"/>
+        <Button Content="Home" HorizontalAlignment="Left" Margin="87,7,0,0" VerticalAlignment="Top" Width="75" Command="{Binding ShowThanksCardListCommand}"/>
+        <Button Content="Create User" HorizontalAlignment="Left" Margin="167,7,0,0" VerticalAlignment="Top" Width="75" Command="{Binding ShowUserMstCommand}" IsEnabled="{Binding AuthorizedUser.IsAdmin}"/>
+        <Button Content="Logout" HorizontalAlignment="Left" Margin="325,7,0,0" VerticalAlignment="Top" Width="65" Command="{Binding LogoffCommand}"/>
+        <Button Content="Task Master Maintainance" HorizontalAlignment="Left" Margin="7,38,0,0" VerticalAlignment="Top" Width="165" Command="{Binding ShowDepartmentMstCommand}"/>
+        <Button Content="Task Master Command" HorizontalAlignment="Left" Margin="225,38,0,0" VerticalAlignment="Top" Width="165" Command="{Binding ShowTagMstCommand}"/>
+        <Button Content="Manual" HorizontalAlignment="Left" Margin="245,7,0,0" VerticalAlignment="Top" Width="75" Command="{Binding ManualCommand}"/>
 
     </Grid>
 </UserControl>

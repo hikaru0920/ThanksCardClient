@@ -16,6 +16,9 @@ namespace ThanksCardClient.Services
         // DepartmentUsers REST API Client
         Task<List<User>> GetDepartmentUsersAsync(long? DepartmentId);
 
+        // BranchUsers REST API Client
+        Task<List<User>> GetBranchUsersAsync(long? BranchId);
+
         // User REST API Client
         Task<List<User>> GetUsersAsync();
         Task<User> PostUserAsync(User user);
@@ -28,6 +31,12 @@ namespace ThanksCardClient.Services
         Task<Department> PutDepartmentAsync(Department department);
         Task<Department> DeleteDepartmentAsync(long Id);
 
+        // Branch REST API Client
+        Task<List<Branch>> GetBranchesAsync();
+        Task<Branch> PostBranchAsync(Branch branch);
+        Task<Branch> PutBranchAsync(Branch branch);
+        Task<Branch> DeleteBranchAsync(long Id);
+
         // TanksCard REST API Client
         Task<List<ThanksCard>> GetThanksCardsAsync();
         Task<ThanksCard> PostThanksCardAsync(ThanksCard thanksCard);
@@ -38,6 +47,10 @@ namespace ThanksCardClient.Services
         Task<Tag> PutTagAsync(Tag tag);
         Task<Tag> DeleteTagAsync(long Id);
 
+
         // Task<ThanksCard> DeleteThanksCardAsync(long id);
+
+
+
     }
 }
